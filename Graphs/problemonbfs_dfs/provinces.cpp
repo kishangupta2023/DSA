@@ -34,7 +34,7 @@ class Solution{
         int vis[V] = {0};
         int count = 0;
         for(int i =0;i<V;i++){
-            if(!vis[i] == 0){
+            if(vis[i] == 0){
                 count++;
                 dfs(i,adjLs,vis);   
             }
