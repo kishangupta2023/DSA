@@ -5,6 +5,15 @@
 
 // To perform a "flood fill", consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color as the starting pixel), and so on. Replace the color of all of the aforementioned pixels with the newColor
 
+// example - 
+// 1 1 1 
+// 1 1 0
+// 1 0 1 
+// solution -->
+// 2 2 2
+// 2 2 0
+// 2 0 1
+
 #include<iostream>
 #include<vector>
 #include<Queue>
