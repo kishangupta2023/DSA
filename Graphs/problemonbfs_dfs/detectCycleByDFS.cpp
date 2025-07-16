@@ -10,7 +10,9 @@ class Solution{
         for(auto adjacentNode: adj[node]){
             if(!vis[adjacentNode]){
                 if(DFS(adjacentNode,node,vis,adj) == true) return true;
-                else if(adjacentNode != parent) return true;
+            }
+            else if(adjacentNode != parent) {
+                return true;
             }
             return false;
         }
