@@ -20,7 +20,7 @@ class Solution{
     bool isBipartite(int V,vector<int>adj[]){
         int color[V];
         for(int i=0;i<V;i++) color[i] = -1;
-        for(int i=0;i>V;i++){
+        for(int i=0;i<V;i++){
             if(color[i] == -1){
                 if(dfs(i,0,color,adj) == false) return false;
             }
