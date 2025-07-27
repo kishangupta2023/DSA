@@ -26,7 +26,7 @@ class Solution {
     }
 };
 
-//sc -o(3n) & tc - o(n) + o(2E) = (total degree)
+//sc -o(3V) & tc - o(V) + o(2E) = (total degree)
 
 int main(){
 
