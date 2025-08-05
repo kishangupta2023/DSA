@@ -80,3 +80,18 @@ class Solution{
     //sc-0(SUm)
 
 };
+
+
+// if zero is present in the array 
+ int f(int ind,int sum,vector<int> &num){
+        if(ind ==0){
+            if(sum == 0 && num[0]) return 2;
+            if(sum == 0 || sum == num[0]) return 1;
+            return 0;
+        }
+        int notTake = f(ind-1,sum,num);
+        int take = 0;
+        if(num[ind] <=sum) take = f(ind-1,sum-num[ind],num);
+
+        return notTake+take;
+    }
