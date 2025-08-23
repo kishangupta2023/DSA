@@ -3,5 +3,6 @@
         "*.cpp": "cpp",
         "iostream": "cpp",
         "bitset": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }
