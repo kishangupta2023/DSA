@@ -87,12 +87,12 @@ class Solution {
     }
     // sc->constant 
 };
-
+// add a file 
 // we can do it in tc->n*4
 // by using n*4 dp 
 // use 0 1 2 3
 // buy sell buy sell 
-// f(ind,transaction){
+// f(ind,transaction)
     //  if(ind == n || trans == 4) return 0;
     //  if(trans% 2 == 0) buy 
     //  else sell 
