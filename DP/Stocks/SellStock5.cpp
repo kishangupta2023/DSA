@@ -55,5 +55,7 @@ class Solution{
         }
         return cur[1];
     }
+    // tc -0(n)
+    // sc-0(6)
 
 };
