@@ -45,6 +45,9 @@ int divide2(int dividend, int divisor) {
 
 int divide(int dividend, int divisor) {
     if(dividend == divisor) return 1;
+    if(dividend == INT_MIN && divisor == -1)
+    return INT_MAX;
+
     bool sign = true;
     // for negative 
     if(dividend >=0 && divisor <0) sign = false;
@@ -57,17 +60,16 @@ int divide(int dividend, int divisor) {
     while(n >= d){
         int cnt =0;
         // while(n>=d*pow(2,cnt+1))
-        while(n >= (d<< (cnt+1))){ 
+        while(n >= (d << (cnt+1))){ 
             cnt++;
         }
         quotient += (1<<cnt);
         n = n-(d*(1<<cnt));
     }
-    if((quotient == (1<<31)) && sign) {
-        return INT_MAX;
-    }
-    if((quotient == (1<<31)) && !sign) return INT_MIN;
-    return sign?quotient :-quotient;
+    quotient =  sign?quotient :-quotient;
+    if(quotient > INT_MAX) return INT_MAX;
+    if(quotient < INT_MIN) return INT_MIN;
+    return (int)quotient;
 }
 int main(){
     int a,b;
