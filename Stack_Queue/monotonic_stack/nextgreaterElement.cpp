@@ -22,13 +22,12 @@ class Solution {
     vector<int>NGE(vector<int>&num){
         stack<int>st;
         int n = num.size();
-        vector<int>nge;
+        vector<int>nge(n);
         for(int i =n-1;i>=0;i++){
             while(!st.empty() && st.top() <= num[i]){
                 st.pop();
             }
-            if(st.empty()) nge.push_back(-1);
-            else nge.push_back(st.top());
+            nge[i] =st.empty() ? -1 : st.top();
             st.push(num[i]);
         }
         return nge;
