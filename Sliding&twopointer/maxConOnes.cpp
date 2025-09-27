@@ -25,9 +25,9 @@ public:
                 l = r+1;
                 r++;
             }
-            int len = r-l+1;
+            int len = r-l;
             maxOnes = max(maxOnes,len);
         }
-        return maxOnes-1;
+        return maxOnes;
     }
 };
