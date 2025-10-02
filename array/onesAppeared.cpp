@@ -22,4 +22,10 @@ class Solution {
     }
     // use hash or map for better solution
     // when number are long then use map with <long long,int>
+     // tc-> 0(n/2+1)
+
+     // optimal solution 
+    //  just xor the number the single element will be left 
+
+
 };
