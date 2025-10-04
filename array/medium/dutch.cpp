@@ -2,6 +2,7 @@
 // sort an array of 0's 1's 2's 
 // [0 to low-1] -> 0
 // [low to mid-1] -> 1
+// mid to high -> 0,1,2
 // [high+1 to n-1] -> 2
 
 #include<bits/stdc++.h>
